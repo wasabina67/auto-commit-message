@@ -62,7 +62,7 @@ pipenv shell
 ```
 
 ```bash
-pipenv sync
+pipenv sync --dev
 ```
 
 #### Build
