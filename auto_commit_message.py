@@ -53,8 +53,8 @@ def main():
         print("-- debug2")
         print(update_files, create_files, delete_files, rename_files)
         message = get_commit_message(files_tuple=(update_files, create_files, delete_files, rename_files))
-        print("-- debug3")
-        print(message)
+        if message:
+            print(message)
     except Exception as ex:
         print(ex)
 
