@@ -37,9 +37,7 @@ def main():
             staging, working, space, file = \
                 change[0], change[1], change[2], change[3:]  # noqa
 
-            if staging == " " and space == " ":
-                continue
-            elif staging == "M" and space == " ":
+            if staging == "M" and space == " ":
                 update_files.append(file)
             elif staging == "A" and space == " ":
                 create_files.append(file)
@@ -47,6 +45,8 @@ def main():
                 delete_files.append(file)
             elif staging == "R" and space == " ":
                 rename_files.append(file)
+            elif staging == " " and space == " ":
+                continue
             else:
                 raise Exception(change)
 
