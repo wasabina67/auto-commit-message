@@ -56,7 +56,7 @@ def main():
         if message:
             print(message)
     except Exception as ex:
-        print(ex)
+        print(str(ex).replace("\n", ""))
 
 
 if __name__ == "__main__":
