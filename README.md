@@ -90,7 +90,7 @@ cd /path/to/your-directory
 ```
 
 ```bash
-curl -L -o auto_commit_message https://github.com/wasabina67/auto-commit-message/releases/download/v0.1/auto_commit_message && \
+curl -L -o auto_commit_message https://github.com/wasabina67/auto-commit-message/releases/latest/download/auto_commit_message && \
 chmod +x auto_commit_message
 ```
 
