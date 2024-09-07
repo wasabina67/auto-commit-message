@@ -13,7 +13,9 @@ def get_commit_message(files_tuple):
 
 
 def get_changes():
-    result = subprocess.run(["git", "status", "--short"], stdout=subprocess.PIPE)
+    result = subprocess.run(["git", "status", "--short"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if result.returncode != 0:
+        raise Exception(result.stderr.decode("utf-8"))
     return result.stdout.decode("utf-8").split("\n")
 
 
