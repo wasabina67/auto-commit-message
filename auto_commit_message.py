@@ -7,7 +7,7 @@ def get_commit_message(files_tuple):
     for files, action in [(update, "Update"), (create, "Create"), (delete, "Delete"), (rename, "Rename")]:
         if files:
             files_joined = ", ".join(files)
-            message = message + f"& {action} {files_joined}" if message else f"{action} {files_joined}"
+            message = message + f" & {action} {files_joined}" if message else f"{action} {files_joined}"
 
     return message
 
