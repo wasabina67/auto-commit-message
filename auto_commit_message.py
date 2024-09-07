@@ -22,8 +22,6 @@ def main():
         changes = get_changes()
         if changes == [""]:
             return
-        print("-- debug1")
-        print(changes)
 
         update_files = []
         create_files = []
@@ -52,8 +50,6 @@ def main():
             else:
                 raise Exception(change)
 
-        print("-- debug2")
-        print(update_files, create_files, delete_files, rename_files)
         message = get_commit_message(files_tuple=(update_files, create_files, delete_files, rename_files))
         if message:
             print(message)
