@@ -3,6 +3,50 @@ Auto commit message
 
 ## Overview
 
+Auto commit message
+
+```bash
+$ git status --short
+A  test1
+A  test2
+?? test3
+$ auto_commit_message
+Create test1, test2
+```
+
+```bash
+$ git status --short
+M  README.md
+A  test1
+A  test2
+?? test3
+$ auto_commit_message
+Update README.md & Create test1, test2
+```
+
+```bash
+$ git status --short
+R  Makefile -> Makefile2
+M  README.md
+A  test1
+A  test2
+?? test3
+$ auto_commit_message
+Update README.md & Create test1, test2 & Rename Makefile -> Makefile2
+```
+
+```bash
+$ git status --short
+R  Makefile -> Makefile2
+M  README.md
+D  setup.cfg
+A  test1
+A  test2
+?? test3
+$ auto_commit_message
+Update README.md & Create test1, test2 & Delete setup.cfg & Rename Makefile -> Makefile2
+```
+
 ## Getting Started
 
 ### Build Locally
