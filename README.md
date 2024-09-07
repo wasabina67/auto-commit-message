@@ -3,7 +3,9 @@ Auto commit message
 
 ## Overview
 
-Auto commit message
+Generate a short commit message from the result of `git status --short`.
+
+<details><summary>Example</summary>
 
 ```bash
 $ git status --short
@@ -46,6 +48,8 @@ A  test2
 $ auto_commit_message
 Update README.md & Create test1, test2 & Delete setup.cfg & Rename Makefile -> Makefile2
 ```
+
+</details>
 
 ## Getting Started
 
