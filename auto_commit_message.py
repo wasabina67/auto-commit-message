@@ -1,6 +1,17 @@
 import subprocess
 
 
+def get_commit_message(files_tuple):
+    message = ""
+    update, create, delete, rename = files_tuple
+    for files, action in [(update, "Update"), (create, "Create"), (delete, "Delete"), (rename, "Rename")]:
+        if files:
+            files_joined = ", ".join(files)
+            message = message + f"& {action} {files_joined}" if message else f"{action} {files_joined}"
+
+    return message
+
+
 def get_changes():
     result = subprocess.run(["git", "status", "--short"], stdout=subprocess.PIPE)
     return result.stdout.decode("utf-8").split("\n")
@@ -37,6 +48,8 @@ def main():
                 raise Exception("aaa")
 
         print(update_files, create_files, delete_files, rename_files)
+        message = get_commit_message(files_tuple=(update_files, create_files, delete_files, rename_files))
+        print(message)
     except Exception as ex:
         print(ex)
 
