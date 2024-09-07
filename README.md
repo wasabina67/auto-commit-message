@@ -29,6 +29,10 @@ make build
 ./dist/auto_commit_message
 ```
 
+```bash
+python auto_commit_message.py
+```
+
 ### Download Binary from Releases
 
 #### Setup
