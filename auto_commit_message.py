@@ -1,6 +1,10 @@
 import subprocess
 
 
+def get_changes():
+    return
+
+
 def main():
     result = subprocess.run(["git", "status", "--short"], stdout=subprocess.PIPE)
     changes = result.stdout.decode("utf-8").split("\n")
