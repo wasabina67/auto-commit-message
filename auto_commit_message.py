@@ -20,6 +20,8 @@ def get_changes():
 def main():
     try:
         changes = get_changes()
+        if changes == [""]:
+            return
         print("-- debug1")
         print(changes)
 
