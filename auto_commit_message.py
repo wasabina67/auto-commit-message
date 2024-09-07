@@ -45,7 +45,7 @@ def main():
             elif staging == "R" and space == " ":
                 rename_files.append(file)
             else:
-                raise Exception("aaa")
+                raise Exception(change)
 
         print(update_files, create_files, delete_files, rename_files)
         message = get_commit_message(files_tuple=(update_files, create_files, delete_files, rename_files))
